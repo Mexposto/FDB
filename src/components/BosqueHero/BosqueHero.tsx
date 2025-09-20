@@ -5,7 +5,7 @@ export default function BosqueHero() {
   return (
     <section className={styles.hero}>
       <Image
-        src="/almuerzo.jpg" // 🔥 poné tu foto en /public
+        src="/almuerzo.JPG" // 🔥 poné tu foto en /public
         alt="Festival en el bosque"
         fill
         priority

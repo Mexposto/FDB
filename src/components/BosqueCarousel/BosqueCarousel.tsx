@@ -5,12 +5,12 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 
 const FOTOS = [
-  "/F1.jpeg",
-  "/F2.jpg",
-  "/F3.jpg",
-  "/F4.jpg",
-  "/F5.jpg",
-  "/F6.jpg",
+  "/F1.JPEG",
+  "/F2.JPG",
+  "/F3.JPG",
+  "/F4.JPG",
+  "/F5.JPG",
+  "/F6.JPG",
 ];
 
 export default function BosqueCarousel() {

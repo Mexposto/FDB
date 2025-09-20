@@ -8,7 +8,7 @@ export default function ArchivePreviewSection() {
     <section className={styles.archiveSection}>
       <div className={styles.archiveOverlay}>
         <h3 className={styles.archiveTitle}>Conocenos un poco más</h3>
-        <Link href="/archivo" className={styles.archiveButton}>
+        <Link href="/elbosque" className={styles.archiveButton}>
           El bosque
         </Link>
       </div>
