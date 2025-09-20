@@ -96,7 +96,7 @@ export default function RemeraForm({ modelo, onBack }: Props) {
       </div>
 
       <p className={styles.alias}>
-        Alias de pago: <strong>turemera.alias.mp</strong>
+        Alias de pago: <strong>macambolemp</strong>
       </p>
 
       <form onSubmit={handleSubmit} className={styles.form}>
