@@ -1,0 +1,86 @@
+/* src/app/remeras/styles.module.css */
+.main {
+  margin-top: 2rem;
+  padding: 2rem;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #121212 0%, #121212 30%, #0b3d0b 100%);
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.talles {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 235px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.talles img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* src/app/remeras/styles.module.css */
+.tallesSection {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tallesButton {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(15, 14, 14, 0.8);
+  border: 1px solid #a4fba6;
+  color: #a4fba6;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.tallesButton:hover {
+  background-color: rgba(164, 251, 166, 0.2);
+  color: white;
+  transform: scale(1.05);
+}
+
+.talles img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

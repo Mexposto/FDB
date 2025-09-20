@@ -1,0 +1,246 @@
+/* styles.module.css - IntroSection responsivo sin variables */
+
+.intro {
+  width: 100%;
+  min-height: calc(100vh - 8rem);
+  background: linear-gradient(to bottom, #121212 0%, #121212 60%, #0b3d0b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: white;
+  text-align: left;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.osoWrapper {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6rem;
+}
+
+.oso {
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+  user-select: none;
+  opacity: 0;
+  transform: translateY(-50px) scale(1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  animation: osoRespira 5s ease-in-out infinite;
+}
+
+.oso.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1.03);
+}
+
+.introContent {
+  flex: 1;
+  height: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-right: 11rem;
+  box-sizing: border-box;
+
+  /* 🔑 evita que se pase del ancho del viewport */
+  width: 100%;
+  overflow: hidden;
+}
+
+.introTextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.introTextBlock h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.introTextBlock p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #cccccc;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.dateHeading {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.countdown {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: nowrap; /* 🔑 antes era nowrap */
+  max-width: 100%; /* 🔑 fuerza ajuste al ancho padre */
+  box-sizing: border-box;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem;
+  border-radius: 6px;
+  flex: 1; /* 🔑 que se encoja si falta espacio */
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.timeBox span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a4fba6;
+}
+
+.timeBox small {
+  font-size: 0.8rem;
+  color: #ddd;
+}
+
+.countdownNote {
+  font-size: 1rem;
+  color: #a4fba6;
+  font-style: italic;
+  text-align: left;
+  margin: 0;
+}
+
+.reserveButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(76, 175, 80, 0.15);
+  border: 1px solid #4caf50;
+  color: #a4fba6;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+  /* 🔑 se adapta al ancho disponible */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.reserveButton:hover {
+  background-color: rgba(164, 251, 166, 0.3);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* Animación oso */
+@keyframes osoRespira {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.03) translateY(-6px);
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 1.5rem;
+    height: auto;
+    min-height: auto;
+  }
+
+  .osoWrapper {
+    order: 2;
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .introContent {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .introTextBlock h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .introContent {
+    order: 1;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .introTextBlock h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeBox {
+    padding: 0.6rem;
+    min-width: 55px;
+  }
+
+  .timeBox span {
+    font-size: 1.4rem;
+  }
+
+  .reserveButton {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    justify-content: center; /* 🔑 centra los bloques en móvil */
+  }
+
+  .reserveButton {
+    width: 100%; /* 🔑 ocupa todo el ancho en móvil */
+    text-align: center;
+    font-size: 1rem;
+  }
+}

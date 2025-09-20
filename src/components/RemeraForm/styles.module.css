@@ -1,0 +1,87 @@
+/* src/components/RemeraForm/styles.module.css */
+.wrapper {
+  max-width: 400px;
+  margin: 0 auto 2rem auto; /* ⬅ centrado horizontal */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #121212 0%, #121212 30%, #0b3d0b 100%);
+}
+.back {
+  background: none;
+  border: none;
+  color: #a4fba6;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.alias {
+  color: #4b5563;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input {
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 95%;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: rgba(15, 14, 14, 0.8);
+  border: 1px solid #a4fba6;
+  color: #a4fba6;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: rgba(164, 251, 166, 0.2);
+  color: white;
+  transform: scale(1.05);
+}
+
+.modeloInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.modeloImagen {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.modeloNombre {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modeloPrecio {
+  color: #a4fba6;
+  font-size: 0.9rem;
+  margin: 0;
+}

@@ -1,0 +1,80 @@
+/* styles.module.css - TuLugarPage responsive */
+
+.mainContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding: 5rem 2rem 4rem; /* espacio para navbar arriba y footer abajo */
+  gap: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #121212 0%, #121212 30%, #0b3d0b 100%);
+}
+
+.column {
+  flex: 1 1 0;
+  max-width: 50%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Para la imagen del oso */
+.osoImage {
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  max-height: 100%;
+}
+
+.waiting {
+  margin-top: 2rem;
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 1rem 6rem; /* top: navbar, bottom: footer */
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
+  .column {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* 🟢 Orden específico en mobile */
+  .column:nth-child(1) {
+    order: 2;
+  } /* oso */
+  .column:nth-child(2) {
+    order: 1;
+  } /* TransferQR (título adentro) */
+  .column:nth-child(3) {
+    order: 3;
+  } /* formulario / waiting */
+
+  .osoImage {
+    width: 120px;
+    height: auto;
+    margin: 0.5rem 0 0.1rem;
+  }
+
+  .waiting {
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+  }
+}

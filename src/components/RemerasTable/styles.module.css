@@ -1,0 +1,120 @@
+.tableContainer {
+  width: 100%;
+}
+
+/* Filtros */
+.filters {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterInput {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  min-width: 250px;
+}
+
+/* Tabla base */
+.confirmTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  color: #111827;
+}
+
+.confirmTable th,
+.confirmTable td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.confirmTable th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #111827;
+}
+
+.confirmTable tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.confirmTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.confirmTable tr:hover {
+  background-color: #e0f2fe;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.confirmTable a {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .confirmTable thead {
+    display: none;
+  }
+
+  .confirmTable,
+  .confirmTable tbody,
+  .confirmTable tr,
+  .confirmTable td {
+    display: block;
+    justify-items: center;
+    width: 250px;
+  }
+
+  .tableContainer {
+    justify-items: center;
+  }
+
+  .row {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0.75rem;
+    background: #fff;
+  }
+
+  .confirmTable td {
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .confirmTable td:last-child {
+    border-bottom: none;
+  }
+
+  .confirmTable td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+    margin-right: 0.75rem;
+    text-align: left;
+  }
+
+  .confirmTable td a {
+    word-break: break-word;
+  }
+
+  /* Ajustes para el email */
+  .confirmTable td[data-label="Email"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

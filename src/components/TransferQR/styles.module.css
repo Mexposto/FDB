@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.description {
+  font-size: 0.7rem;
+  text-align: justify;
+  color: #4b5563;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 600;
+  margin: 0.25rem 0 0.25rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  background-color: rgba(76, 175, 80, 0.15);
+  border: 1px solid #4caf50;
+  color: #a4fba6;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+  /* 🔑 se adapta al ancho disponible */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: rgba(164, 251, 166, 0.3);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+.selected {
+  background-color: #065f46;
+}
+
+.transferInfo {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.transferText {
+  color: #374151;
+  font-size: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.alias {
+  font-size: 1rem;
+  color: #15803d;
+  margin: 0.3rem 0;
+  padding-bottom: 0rem;
+}
+
+.openAppButton {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(16, 95, 231, 0.25);
+  border: 1px solid #1473f0;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+  /* 🔑 se adapta al ancho disponible */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.openAppButton:hover {
+  background-color: #1d4ed8;
+}
+
+.customAmountContainer {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.customAmountInput {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+
+.customAmountInput:focus {
+  border-color: #0070f3;
+}
+
+.customInput {
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.customInput:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.7rem;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,53 @@
+@keyframes logoIntro {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90vw; /* seguridad para que nunca sobrepase la pantalla */
+  height: auto; /* mantiene proporción */
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4))
+    drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  animation: logoIntro 1.5s ease-out forwards,
+    logoPulse 2.5s ease-in-out 1.5s infinite;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .logo {
+    width: 70vw; /* ocupa un % del ancho del móvil */
+    max-width: 300px; /* opcional: límite superior */
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
