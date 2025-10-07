@@ -39,7 +39,7 @@ const PaymentConfirmationForm = ({ selectedAmount }: Props) => {
             window.location.reload();
             return 100;
           }
-          return prev + 7.5; // 2 segundos total
+          return prev + 7.5; // ~2 segundos total
         });
       }, 100);
 
@@ -60,6 +60,7 @@ const PaymentConfirmationForm = ({ selectedAmount }: Props) => {
     try {
       let publicUrl: string | null = null;
 
+      // 🔹 Subir comprobante a Supabase si hay monto
       if (selectedAmount > 0 && file) {
         const filePath = `comprobantes/${Date.now()}_${file.name}`;
         const { error: uploadError } = await supabase.storage
@@ -76,6 +77,7 @@ const PaymentConfirmationForm = ({ selectedAmount }: Props) => {
         if (!publicUrl) throw new Error("No se pudo generar la URL pública.");
       }
 
+      // 🔹 Insertar datos en Supabase
       const insertData: InsertData = {
         name: form.name,
         surname: form.surname,
@@ -92,6 +94,13 @@ const PaymentConfirmationForm = ({ selectedAmount }: Props) => {
         .insert(insertData);
 
       if (insertError) throw new Error("Error guardando los datos");
+
+      // 🔹 Enviar correo de confirmación con Resend
+      await fetch("/api/send-confirmation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(insertData),
+      });
 
       setSubmitted(true);
     } catch (err: unknown) {
