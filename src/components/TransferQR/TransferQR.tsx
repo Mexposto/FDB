@@ -45,22 +45,24 @@ const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
     <div className={styles.container}>
       <h2 className={styles.title}>Acceso al Bosque</h2>
       <p className={styles.description}>
-        Aunque el FDB es sin fines de lucro, valoramos el trabajo de cada
-        propuesta artística, por eso el ingreso es con “entrada a la gorra” con
-        un valor sugerido, que se reparte íntegramente entre les artistas de la
-        noche. Dado que el festival se realiza en una reserva natural y con
-        capacidad limitada, y para evitar reservas sin compromiso, este año
-        implementamos una &quot;Gorra virtual&quot; como compromiso de
-        asistencia. Su valor es sugerido, no obligatorio, y no condiciona el
-        acceso: lo más importante es tu presencia. El formulario es personal,
-        por lo que cada asistente debe completarlo. Una vez hecho el aporte (si
-        puede realizarse) y enviados tus datos, ¡tu lugar en el bosque estará
-        reservado y te esperamos!
+        Aunque el Festival Del Bosque es sin fines de lucro, valoramos mucho el
+        trabajo de cada propuesta artística, por eso, el ingreso es “a la gorra”
+        con un valor sugerido, que se reparte íntegramente entre les artistas de
+        la noche. Dado que el festi se realiza en una reserva natural en Jose
+        León Suarez, su capacidad es limitada. Para evitar reservas sin
+        compromiso, este año implementamos una &quot;Gorra virtual&quot; como
+        compromiso de asistencia. Su valor es sugerido, no obligatorio, y no
+        condiciona el acceso: lo más importante es tu presencia. El formulario
+        es personal, por lo que cada asistente debe completarlo de forma
+        individual. Una vez hecho el aporte (si puede realizarse) y enviados tus
+        datos, ¡tu lugar en el bosque estará reservado y te esperamos! La
+        ubicación del festi te va a llegar al mail que pongas en el formulario
+        de abajo.
       </p>
 
       <p className={styles.subtitle}>Seleccioná un monto:</p>
       <div className={styles.buttonGroup}>
-        {[5000, 10000, 15000].map((value) => (
+        {[5000, 8000, 10000].map((value) => (
           <button
             key={value}
             onClick={() => handleAmountClick(value)}
