@@ -20,7 +20,10 @@ export async function POST(req: Request) {
           ? `Recibimos tu aporte de <strong>$${amount}</strong>.`
           : "Registramos tu confirmación de asistencia."
       }</p>
-      <p>Nos vemos el 15 de noviembre!</p>
+      <p>La direccion del Festival es: Iguazú 4590, B1655 Cdad. Jardín El Libertador, Provincia de Buenos Aires</p>
+      <p>Te dejamos link a la ubicación en Google Maps: <a href="https://maps.app.goo.gl/kHpoaYMYS4ime9ag9"</a></p>
+      <p>Nos vemos el 15 de noviembre a partir de las 20hs!</p>
+      
     `;
 
     const { data, error } = await resend.emails.send({
