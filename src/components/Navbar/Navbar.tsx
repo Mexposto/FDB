@@ -11,9 +11,9 @@ export default function NavBar() {
         <li>
           <Link href="/tulugar">Tu lugar</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/remeras">Remeras</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/elbosque">El bosque</Link>
         </li>

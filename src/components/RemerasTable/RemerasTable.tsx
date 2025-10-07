@@ -1,4 +1,3 @@
-// src/components/RemerasTable/RemerasTable.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -16,6 +15,7 @@ interface RemeraEntry {
   created_at: string;
 }
 
+// 🔹 Convierte la fecha UTC a hora local (Argentina)
 const toLocalTime = (utcString: string) => {
   const date = new Date(utcString);
   date.setHours(date.getHours() - 3);
@@ -28,10 +28,15 @@ export default function RemerasTable() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("pedidos_remeras")
         .select()
-        .order("surname", { ascending: true });
+        .order("created_at", { ascending: false }); // 👈 ordenadas por fecha DESC
+
+      if (error) {
+        console.error("Error al obtener pedidos de remeras:", error);
+        return;
+      }
 
       if (data) setEntries(data);
     };
@@ -39,6 +44,7 @@ export default function RemerasTable() {
     fetchData();
   }, []);
 
+  // 🔹 Filtrar por nombre o apellido
   const filtered = entries.filter((e) =>
     `${e.name} ${e.surname}`.toLowerCase().includes(filter.toLowerCase())
   );
@@ -76,9 +82,17 @@ export default function RemerasTable() {
               <td data-label="Talle">{e.size}</td>
               <td data-label="Modelo">{e.model}</td>
               <td data-label="Comprobante">
-                <a href={e.proof_url} target="_blank" rel="noopener noreferrer">
-                  Ver comprobante
-                </a>
+                {e.proof_url ? (
+                  <a
+                    href={e.proof_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver comprobante
+                  </a>
+                ) : (
+                  "-"
+                )}
               </td>
               <td data-label="Fecha">{toLocalTime(e.created_at)}</td>
             </tr>

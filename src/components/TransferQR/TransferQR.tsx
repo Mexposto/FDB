@@ -7,7 +7,7 @@ interface Props {
   setSelectedAmount: (amount: number | null) => void;
 }
 
-const alias = "Alias: macambolemp";
+const alias = "Alias: delbosque2025";
 
 const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
   const [isCustomActive, setIsCustomActive] = useState(false);
