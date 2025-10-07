@@ -1,4 +1,3 @@
-// src/components/RemeraForm/RemeraForm.tsx
 "use client";
 
 import { useState } from "react";
@@ -37,6 +36,7 @@ export default function RemeraForm({ modelo, onBack }: Props) {
     setLoading(true);
 
     try {
+      // 🔹 1. Subir comprobante a Supabase Storage
       const filePath = `comprobantes/${Date.now()}_${file.name}`;
       const { error: uploadError } = await supabase.storage
         .from("comprobantes")
@@ -48,6 +48,7 @@ export default function RemeraForm({ modelo, onBack }: Props) {
         .from("comprobantes")
         .getPublicUrl(filePath);
 
+      // 🔹 2. Insertar datos del pedido en Supabase
       const { error: insertError } = await supabase
         .from("pedidos_remeras")
         .insert({
@@ -62,11 +63,25 @@ export default function RemeraForm({ modelo, onBack }: Props) {
 
       if (insertError) throw insertError;
 
-      alert("¡Pedido confirmado! Te contactaremos pronto.");
+      // 🔹 3. Enviar correo de confirmación
+      await fetch("/api/send-remera", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          surname: form.surname,
+          email: form.email,
+          model: modelo.nombre,
+          size: form.size,
+          amount: modelo.precio,
+        }),
+      });
+
+      alert("¡Pedido confirmado! Te enviamos un mail con los detalles 💚");
       onBack();
     } catch (err) {
       console.error(err);
-      alert("Error al guardar el pedido");
+      alert("Error al guardar el pedido o enviar el correo");
     } finally {
       setLoading(false);
     }
@@ -85,8 +100,8 @@ export default function RemeraForm({ modelo, onBack }: Props) {
         <Image
           src={modelo.imagen}
           alt={modelo.nombre}
-          width={200} // ajustá según lo que quieras
-          height={200} // ajustá según lo que quieras
+          width={200}
+          height={200}
           className={styles.modeloImagen}
         />
         <div>
@@ -142,6 +157,7 @@ export default function RemeraForm({ modelo, onBack }: Props) {
           type="file"
           accept="image/*"
           onChange={handleFile}
+          required
           className={styles.input}
         />
         <button type="submit" className={styles.button} disabled={loading}>
