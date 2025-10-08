@@ -28,8 +28,8 @@ export default function BosqueCarousel() {
             <Image
               src={src}
               alt={`Foto ${i + 1} del festival`}
-              width={400}
-              height={300}
+              width={320}
+              height={240}
               className={styles.image}
             />
           </div>
@@ -42,8 +42,8 @@ export default function BosqueCarousel() {
             <Image
               src={selected}
               alt="Foto ampliada"
-              width={1200}
-              height={800}
+              width={900}
+              height={600}
               className={styles.modalImage}
             />
           </div>
