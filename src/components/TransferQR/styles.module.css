@@ -67,8 +67,8 @@
 }
 
 .transferText {
-  color: #374151;
-  font-size: 0.7rem;
+  color: #8f9aa9;
+  font-size: 0.8rem;
   margin-bottom: 0.3rem;
 }
 
@@ -142,7 +142,8 @@
   }
 
   .description {
-    font-size: 0.8rem;
+    font-weight: 500;
+    font-size: 0.9rem;
     text-align: justify;
   }
 }
