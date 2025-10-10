@@ -66,6 +66,7 @@ export default function ConfirmationsTable() {
       <table className={styles.confirmTable}>
         <thead>
           <tr>
+            <th>#</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
@@ -75,8 +76,10 @@ export default function ConfirmationsTable() {
           </tr>
         </thead>
         <tbody>
-          {filtered.map((e) => (
+          {filtered.map((e, index) => (
             <tr key={e.id} className={styles.row}>
+              {/* Número invertido */}
+              <td data-label="Número">{filtered.length - index}</td>
               <td data-label="Nombre">{e.name}</td>
               <td data-label="Apellido">{e.surname}</td>
               <td data-label="Email">{e.email}</td>
