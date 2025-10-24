@@ -10,14 +10,14 @@ const MODELOS = [
   {
     id: 1,
     nombre: "Oso Guardián",
-    precio: 20000,
+    precio: 25000,
     imagen: "/oso guardian.png",
   },
-  { id: 2, nombre: "Oso Gozadera", precio: 20000, imagen: "/oso gozadera.png" },
+  { id: 2, nombre: "Oso Gozadera", precio: 25000, imagen: "/oso gozadera.png" },
   {
     id: 3,
     nombre: "Pavo del Bosque",
-    precio: 20000,
+    precio: 25000,
     imagen: "/pavo del bosque.png",
   },
 ];
