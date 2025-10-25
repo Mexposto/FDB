@@ -57,7 +57,7 @@ const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
         individual. Una vez hecho el aporte (si puede realizarse) y enviados tus
         datos, ¡tu lugar en el bosque estará reservado y te esperamos! La
         ubicación del festi te va a llegar al mail que pongas en el formulario
-        de abajo dentro de las 24hs.
+        de abajo dentro de las 24hs (puede llegar a spam, fijate!).
       </p>
 
       <p className={styles.subtitle}>Seleccioná un monto:</p>
