@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import TransferQR from "@/components/TransferQR/TransferQR";
-import PaymentConfirmationForm from "@/components/PaymentConfirmationForm/PaymentConfirmationForm";
+// import { useState } from "react";
+// import TransferQR from "@/components/TransferQR/TransferQR";
+// import PaymentConfirmationForm from "@/components/PaymentConfirmationForm/PaymentConfirmationForm";
 import styles from "./styles.module.css";
 
 export default function TuLugarPage() {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
+  // const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
 
   return (
     <main className={styles.mainContainer}>
@@ -23,7 +23,7 @@ export default function TuLugarPage() {
         />
       </div>
 
-      <div className={styles.column}>
+      {/* <div className={styles.column}>
         <TransferQR
           selectedAmount={selectedAmount}
           setSelectedAmount={setSelectedAmount}
@@ -39,7 +39,7 @@ export default function TuLugarPage() {
             formulario.
           </p>
         )}
-      </div>
+      </div> */}
     </main>
   );
 }
