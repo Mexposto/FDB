@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
-const festivalDate = new Date("2025-11-15T20:00:00"); // 👈 fuera del componente
+const festivalDate = new Date("2026-12-12T20:00:00"); // 👈 fuera del componente
 
 export default function IntroSection() {
   const [countdown, setCountdown] = useState({
@@ -53,7 +53,7 @@ export default function IntroSection() {
       <div className={styles.introContent}>
         <div className={styles.introTextBlock}>
           <p className={styles.dateHeading}>
-            Capítulo 5 · 15 de noviembre · 20 hs.
+            Capítulo 6 · 12 de diciembre · 20 hs.
           </p>
           <h3>Próximo encuentro en el bosque</h3>
           <p>Amistad y arte en la naturaleza</p>
@@ -80,9 +80,9 @@ export default function IntroSection() {
 
         <p className={styles.countdownNote}>¡Ya está llegando!</p>
 
-        {/* <Link href="/tulugar" className={styles.reserveButton}>
+        <Link href="/tulugar" className={styles.reserveButton}>
           Reservá tu lugar
-        </Link> */}
+        </Link>
       </div>
     </section>
   );
