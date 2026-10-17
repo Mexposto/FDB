@@ -8,11 +8,11 @@ export default function NavBar() {
         <li>
           <Link href="/">Home</Link>
         </li>
-        {/* <li>
-          <Link href="/tulugar">Tu lugar</Link>
-        </li>
         <li>
-          <Link href="/remeras">Remeras</Link>
+        <Link href="/tulugar">Tu lugar</Link>
+        </li>
+        {/* <li>
+        <Link href="/remeras">Remeras</Link>
         </li> */}
         <li>
           <Link href="/elbosque">El bosque</Link>
