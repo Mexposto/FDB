@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     Ver ubicación
   </a>
 </p>
-      <p>Nos vemos el 15 de noviembre a partir de las 20hs!</p>
+      <p>Nos vemos el 12 de diciembre a partir de las 20hs!</p>
       
     `;
 

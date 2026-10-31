@@ -62,7 +62,7 @@ const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
 
       <p className={styles.subtitle}>Seleccioná un monto:</p>
       <div className={styles.buttonGroup}>
-        {[5000, 8000, 10000].map((value) => (
+        {[10000, 15000, 20000].map((value) => (
           <button
             key={value}
             onClick={() => handleAmountClick(value)}
@@ -97,14 +97,14 @@ const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
         )}
 
         {/* 🔹 Botón $0 */}
-        <button
+        {/* <button
           onClick={handleZeroClick}
           className={`${styles.button} ${
             selectedAmount === 0 ? styles.selected : ""
           }`}
         >
           No puedo aportar ($0)
-        </button>
+        </button> */}
       </div>
 
       {selectedAmount !== null && selectedAmount > 0 && (
