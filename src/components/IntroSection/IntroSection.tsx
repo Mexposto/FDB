@@ -80,9 +80,9 @@ export default function IntroSection() {
 
         <p className={styles.countdownNote}>¡Ya está llegando!</p>
 
-        <Link href="/tulugar" className={styles.reserveButton}>
+        {/* <Link href="/tulugar" className={styles.reserveButton}>
           Reservá tu lugar
-        </Link>
+        </Link> */}
       </div>
     </section>
   );
