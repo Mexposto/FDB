@@ -7,7 +7,7 @@ interface Props {
   setSelectedAmount: (amount: number | null) => void;
 }
 
-const alias = "Alias: delbosque2025";
+const alias = "Alias: listadelbosque2026";
 
 const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
   const [isCustomActive, setIsCustomActive] = useState(false);
@@ -45,20 +45,7 @@ const TransferQR = ({ selectedAmount, setSelectedAmount }: Props) => {
     <div className={styles.container}>
       <h2 className={styles.title}>Acceso al Bosque</h2>
       <p className={styles.description}>
-        Aunque el Festival Del Bosque es sin fines de lucro, valoramos mucho el
-        trabajo de cada propuesta artística, por eso, el ingreso es “a la gorra”
-        con un valor sugerido, que se reparte íntegramente entre les artistas de
-        la noche. Dado que el festi se realiza en una reserva natural en Jose
-        León Suarez, su capacidad es limitada. Para evitar reservas sin
-        compromiso, este año implementamos una &quot;Gorra virtual&quot; como
-        compromiso de asistencia. Su valor es sugerido, no obligatorio, y no
-        condiciona el acceso: lo más importante es tu presencia. El formulario
-        es personal, por lo que cada asistente debe completarlo de forma
-        individual. Una vez hecho el aporte (si puede realizarse) y enviados tus
-        datos, ¡tu lugar en el bosque estará reservado y te esperamos! La
-        ubicación del festi te va a llegar al mail que pongas en el formulario
-        de abajo dentro de las 24hs (puede llegar a spam, fijate!).
-      </p>
+        Aunque el Festival Del Bosque es sin fines de lucro, valoramos mucho el trabajo de cada propuesta artística, por eso, el ingreso es “a la gorra” con un valor sugerido, que se reparte íntegramente entre les artistas de la noche. Dado que el festi se realiza en una reserva natural en Jose León Suarez, su capacidad es limitada. Para evitar reservas sin compromiso, implementamos una &quot;Gorra virtual&quot; como compromiso de asistencia. Su valor es sugerido, no obligatorio, y no condiciona el acceso: lo más importante es tu presencia. El formulario es personal, por lo que cada asistente debe completarlo de forma individual. Una vez hecho el aporte y enviados tus datos, ¡tu lugar en el bosque estará reservado y te esperamos! La ubicación del festi te va a llegar al mail que pongas en el formulario de abajo dentro de las 24hs (puede llegar a spam, fijate!).</p>
 
       <p className={styles.subtitle}>Seleccioná un monto:</p>
       <div className={styles.buttonGroup}>

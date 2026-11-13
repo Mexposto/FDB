@@ -8,9 +8,9 @@ export default function NavBar() {
         <li>
           <Link href="/">Home</Link>
         </li>
-        {/* <li>
+        {<li>
         <Link href="/tulugar">Tu lugar</Link>
-        </li> */}
+        </li>}
         {/* <li>
         <Link href="/remeras">Remeras</Link>
         </li> */}
